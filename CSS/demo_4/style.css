@@ -1,0 +1,32 @@
+._div {
+    width: 50%;
+    height: 50%;
+    /* border: 1px solid black; */
+    box-sizing: border-box;
+    float: left;
+}
+
+._div div {
+    /* display: block; */
+    width: 70%;
+    height: 70%;
+    border: 5px solid black;
+    box-sizing: border-box;
+    /* margin: 5%; */
+}
+
+._div img {
+    height: 80%;
+    width: auto;
+    border: 5px red solid;
+}
+
+._border {
+    border: 5px solid black;
+}
+
+.centerContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
