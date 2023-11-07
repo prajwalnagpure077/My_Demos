@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+</head>
+
+<body
+    style="background-image: url(images/bg.jpg);background-size:cover;margin: 0;padding: 0;background-position-y: -5px;background-position-x: 2px;background-repeat: no-repeat;overflow: hidden;"
+    onload="INIT()">
+    <div style="width: 415px;height: 100vh;position: absolute;" id="chatScroller"></div>
+    <div style="width: 100%;height: 100vh;" id="_container">
+        <button class="chatElements" onclick="ClickedChat(this)" style="top: 15px;overflow: hidden; ">
+            <div class="chatElementsImgMask">
+                <img src="images/profiles/1.jpg" class="chatElementsImg" alt="">
+            </div>
+            <div class="chatElementsShadow">
+            </div>
+            <div
+                style="margin-left: -60px;width:100%;background-color: transparent;text-align: left;display: flex;flex-direction: column;justify-content: start;height: 100%;gap: 20px;">
+                <div style="margin-left: 80px;color: white;display: flex;">
+                    <div style="flex: 1;min-width: 400px;">
+                        <br><big><b>Sweet Home</b></big>
+                        <span style="color: rgb(255, 255, 255,0.7);">
+                            <br>House is not home.
+                            <br>It takes time to make house a home.
+                        </span>
+                    </div>
+                    <div style="width: 40px;display: block;" onclick="closeCurrent()">
+                        <br>
+                        <span style="font-size: 30px;">x</span>
+                    </div>
+                </div>
+                <div
+                    style="background-color:transparent;width: 100%;min-height: 160px;overflow-y: scroll;flex: 2;padding-right: 30px;padding-bottom: 30px;padding-top: 30px;border-top: 1px solid white;border-bottom: 1px solid white;">
+                    <div>
+                        <div class="messageObj"></div>
+                    </div>
+                    <div style="display: flex;justify-content: right;">
+                        <div class="messageObj"></div>
+                    </div>
+                    <div>
+                        <div class="messageObj"></div>
+                    </div>
+                    <div style="display: flex;justify-content: right;">
+                        <div class="messageObj"></div>
+                    </div>
+                    <div>
+                        <div class="messageObj"></div>
+                    </div>
+                    <div style="display: flex;justify-content: right;">
+                        <div class="messageObj"></div>
+                    </div>
+
+                </div>
+                <div style="background-color: transparent;width: 100%;height: 60px;">
+                    <input type="text" class="inputText" placeholder="Type a message">
+                </div>
+            </div>
+        </button>
+
+
+
+
+        <button class="chatElements" onclick="ClickedChat(this)" style="top: 15px;overflow: hidden; ">
+            <div class="chatElementsImgMask">
+                <img src="images/profiles/2.jpg" class="chatElementsImg" alt="">
+            </div>
+            <div class="chatElementsShadow">
+            </div>
+            <div
+                style="margin-left: -60px;width:100%;background-color: transparent;text-align: left;display: flex;flex-direction: column;justify-content: start;height: 100%;gap: 20px;">
+                <div style="margin-left: 80px;color: white;display: flex;">
+                    <div style="flex: 1;min-width: 400px;">
+                        <br><big><b>Sweet Home</b></big>
+                        <span style="color: rgb(255, 255, 255,0.7);">
+                            <br>House is not home.
+                            <br>It takes time to make house a home.
+                        </span>
+                    </div>
+                    <div style="width: 40px;display: block;" onclick="closeCurrent()">
+                        <br>
+                        <span style="font-size: 30px;">x</span>
+                    </div>
+                </div>
+                <div
+                    style="background-color:transparent;width: 100%;min-height: 160px;overflow-y: scroll;flex: 2;padding-right: 30px;padding-bottom: 30px;padding-top: 30px;border-top: 1px solid white;border-bottom: 1px solid white;">
+                    <div>
+                        <div class="messageObj"></div>
+                    </div>
+                    <div style="display: flex;justify-content: right;">
+                        <div class="messageObj"></div>
+                    </div>
+                    <div>
+                        <div class="messageObj"></div>
+                    </div>
+                    <div style="display: flex;justify-content: right;">
+                        <div class="messageObj"></div>
+                    </div>
+                    <div>
+                        <div class="messageObj"></div>
+                    </div>
+                    <div style="display: flex;justify-content: right;">
+                        <div class="messageObj"></div>
+                    </div>
+
+                </div>
+                <div style="background-color: transparent;width: 100%;height: 60px;">
+                    <input type="text" class="inputText" placeholder="Type a message">
+                </div>
+            </div>
+        </button><button class="chatElements" onclick="ClickedChat(this)" style="top: 15px;overflow: hidden; ">
+            <div class="chatElementsImgMask">
+                <img src="images/profiles/3.jpg" class="chatElementsImg" alt="">
+            </div>
+            <div class="chatElementsShadow">
+            </div>
+            <div
+                style="margin-left: -60px;width:100%;background-color: transparent;text-align: left;display: flex;flex-direction: column;justify-content: start;height: 100%;gap: 20px;">
+                <div style="margin-left: 80px;color: white;display: flex;">
+                    <div style="flex: 1;min-width: 400px;">
+                        <br><big><b>Sweet Home</b></big>
+                        <span style="color: rgb(255, 255, 255,0.7);">
+                            <br>House is not home.
+                            <br>It takes time to make house a home.
+                        </span>
+                    </div>
+                    <div style="width: 40px;display: block;" onclick="closeCurrent()">
+                        <br>
+                        <span style="font-size: 30px;">x</span>
+                    </div>
+                </div>
+                <div
+                    style="background-color:transparent;width: 100%;min-height: 160px;overflow-y: scroll;flex: 2;padding-right: 30px;padding-bottom: 30px;padding-top: 30px;border-top: 1px solid white;border-bottom: 1px solid white;">
+                    <div>
+                        <div class="messageObj"></div>
+                    </div>
+                    <div style="display: flex;justify-content: right;">
+                        <div class="messageObj"></div>
+                    </div>
+                    <div>
+                        <div class="messageObj"></div>
+                    </div>
+                    <div style="display: flex;justify-content: right;">
+                        <div class="messageObj"></div>
+                    </div>
+                    <div>
+                        <div class="messageObj"></div>
+                    </div>
+                    <div style="display: flex;justify-content: right;">
+                        <div class="messageObj"></div>
+                    </div>
+
+                </div>
+                <div style="background-color: transparent;width: 100%;height: 60px;">
+                    <input type="text" class="inputText" placeholder="Type a message">
+                </div>
+            </div>
+        </button><button class="chatElements" onclick="ClickedChat(this)" style="top: 15px;overflow: hidden; ">
+            <div class="chatElementsImgMask">
+                <img src="images/profiles/4.jpg" class="chatElementsImg" alt="">
+            </div>
+            <div class="chatElementsShadow">
+            </div>
+            <div
+                style="margin-left: -60px;width:100%;background-color: transparent;text-align: left;display: flex;flex-direction: column;justify-content: start;height: 100%;gap: 20px;">
+                <div style="margin-left: 80px;color: white;display: flex;">
+                    <div style="flex: 1;min-width: 400px;">
+                        <br><big><b>Sweet Home</b></big>
+                        <span style="color: rgb(255, 255, 255,0.7);">
+                            <br>House is not home.
+                            <br>It takes time to make house a home.
+                        </span>
+                    </div>
+                    <div style="width: 40px;display: block;" onclick="closeCurrent()">
+                        <br>
+                        <span style="font-size: 30px;">x</span>
+                    </div>
+                </div>
+                <div
+                    style="background-color:transparent;width: 100%;min-height: 160px;overflow-y: scroll;flex: 2;padding-right: 30px;padding-bottom: 30px;padding-top: 30px;border-top: 1px solid white;border-bottom: 1px solid white;">
+                    <div>
+                        <div class="messageObj"></div>
+                    </div>
+                    <div style="display: flex;justify-content: right;">
+                        <div class="messageObj"></div>
+                    </div>
+                    <div>
+                        <div class="messageObj"></div>
+                    </div>
+                    <div style="display: flex;justify-content: right;">
+                        <div class="messageObj"></div>
+                    </div>
+                    <div>
+                        <div class="messageObj"></div>
+                    </div>
+                    <div style="display: flex;justify-content: right;">
+                        <div class="messageObj"></div>
+                    </div>
+
+                </div>
+                <div style="background-color: transparent;width: 100%;height: 60px;">
+                    <input type="text" class="inputText" placeholder="Type a message">
+                </div>
+            </div>
+        </button><button class="chatElements" onclick="ClickedChat(this)" style="top: 15px;overflow: hidden; ">
+            <div class="chatElementsImgMask">
+                <img src="images/profiles/5.jpg" class="chatElementsImg" alt="">
+            </div>
+            <div class="chatElementsShadow">
+            </div>
+            <div
+                style="margin-left: -60px;width:100%;background-color: transparent;text-align: left;display: flex;flex-direction: column;justify-content: start;height: 100%;gap: 20px;">
+                <div style="margin-left: 80px;color: white;display: flex;">
+                    <div style="flex: 1;min-width: 400px;">
+                        <br><big><b>Sweet Home</b></big>
+                        <span style="color: rgb(255, 255, 255,0.7);">
+                            <br>House is not home.
+                            <br>It takes time to make house a home.
+                        </span>
+                    </div>
+                    <div style="width: 40px;display: block;" onclick="closeCurrent()">
+                        <br>
+                        <span style="font-size: 30px;">x</span>
+                    </div>
+                </div>
+                <div
+                    style="background-color:transparent;width: 100%;min-height: 160px;overflow-y: scroll;flex: 2;padding-right: 30px;padding-bottom: 30px;padding-top: 30px;border-top: 1px solid white;border-bottom: 1px solid white;">
+                    <div>
+                        <div class="messageObj"></div>
+                    </div>
+                    <div style="display: flex;justify-content: right;">
+                        <div class="messageObj"></div>
+                    </div>
+                    <div>
+                        <div class="messageObj"></div>
+                    </div>
+                    <div style="display: flex;justify-content: right;">
+                        <div class="messageObj"></div>
+                    </div>
+                    <div>
+                        <div class="messageObj"></div>
+                    </div>
+                    <div style="display: flex;justify-content: right;">
+                        <div class="messageObj"></div>
+                    </div>
+
+                </div>
+                <div style="background-color: transparent;width: 100%;height: 60px;">
+                    <input type="text" class="inputText" placeholder="Type a message">
+                </div>
+            </div>
+        </button><button class="chatElements" onclick="ClickedChat(this)" style="top: 15px;overflow: hidden; ">
+            <div class="chatElementsImgMask">
+                <img src="images/profiles/6.jpg" class="chatElementsImg" alt="">
+            </div>
+            <div class="chatElementsShadow">
+            </div>
+            <div
+                style="margin-left: -60px;width:100%;background-color: transparent;text-align: left;display: flex;flex-direction: column;justify-content: start;height: 100%;gap: 20px;">
+                <div style="margin-left: 80px;color: white;display: flex;">
+                    <div style="flex: 1;min-width: 400px;">
+                        <br><big><b>Sweet Home</b></big>
+                        <span style="color: rgb(255, 255, 255,0.7);">
+                            <br>House is not home.
+                            <br>It takes time to make house a home.
+                        </span>
+                    </div>
+                    <div style="width: 40px;display: block;" onclick="closeCurrent()">
+                        <br>
+                        <span style="font-size: 30px;">x</span>
+                    </div>
+                </div>
+                <div
+                    style="background-color:transparent;width: 100%;min-height: 160px;overflow-y: scroll;flex: 2;padding-right: 30px;padding-bottom: 30px;padding-top: 30px;border-top: 1px solid white;border-bottom: 1px solid white;">
+                    <div>
+                        <div class="messageObj"></div>
+                    </div>
+                    <div style="display: flex;justify-content: right;">
+                        <div class="messageObj"></div>
+                    </div>
+                    <div>
+                        <div class="messageObj"></div>
+                    </div>
+                    <div style="display: flex;justify-content: right;">
+                        <div class="messageObj"></div>
+                    </div>
+                    <div>
+                        <div class="messageObj"></div>
+                    </div>
+                    <div style="display: flex;justify-content: right;">
+                        <div class="messageObj"></div>
+                    </div>
+
+                </div>
+                <div style="background-color: transparent;width: 100%;height: 60px;">
+                    <input type="text" class="inputText" placeholder="Type a message">
+                </div>
+            </div>
+        </button><button class="chatElements" onclick="ClickedChat(this)" style="top: 15px;overflow: hidden; ">
+            <div class="chatElementsImgMask">
+                <img src="images/profiles/7.jpg" class="chatElementsImg" alt="">
+            </div>
+            <div class="chatElementsShadow">
+            </div>
+            <div
+                style="margin-left: -60px;width:100%;background-color: transparent;text-align: left;display: flex;flex-direction: column;justify-content: start;height: 100%;gap: 20px;">
+                <div style="margin-left: 80px;color: white;display: flex;">
+                    <div style="flex: 1;min-width: 400px;">
+                        <br><big><b>Sweet Home</b></big>
+                        <span style="color: rgb(255, 255, 255,0.7);">
+                            <br>House is not home.
+                            <br>It takes time to make house a home.
+                        </span>
+                    </div>
+                    <div style="width: 40px;display: block;" onclick="closeCurrent()">
+                        <br>
+                        <span style="font-size: 30px;">x</span>
+                    </div>
+                </div>
+                <div
+                    style="background-color:transparent;width: 100%;min-height: 160px;overflow-y: scroll;flex: 2;padding-right: 30px;padding-bottom: 30px;padding-top: 30px;border-top: 1px solid white;border-bottom: 1px solid white;">
+                    <div>
+                        <div class="messageObj"></div>
+                    </div>
+                    <div style="display: flex;justify-content: right;">
+                        <div class="messageObj"></div>
+                    </div>
+                    <div>
+                        <div class="messageObj"></div>
+                    </div>
+                    <div style="display: flex;justify-content: right;">
+                        <div class="messageObj"></div>
+                    </div>
+                    <div>
+                        <div class="messageObj"></div>
+                    </div>
+                    <div style="display: flex;justify-content: right;">
+                        <div class="messageObj"></div>
+                    </div>
+
+                </div>
+                <div style="background-color: transparent;width: 100%;height: 60px;">
+                    <input type="text" class="inputText" placeholder="Type a message">
+                </div>
+            </div>
+        </button><button class="chatElements" onclick="ClickedChat(this)" style="top: 15px;overflow: hidden; ">
+            <div class="chatElementsImgMask">
+                <img src="images/profiles/8.jpg" class="chatElementsImg" alt="">
+            </div>
+            <div class="chatElementsShadow">
+            </div>
+            <div
+                style="margin-left: -60px;width:100%;background-color: transparent;text-align: left;display: flex;flex-direction: column;justify-content: start;height: 100%;gap: 20px;">
+                <div style="margin-left: 80px;color: white;display: flex;">
+                    <div style="flex: 1;min-width: 400px;">
+                        <br><big><b>Sweet Home</b></big>
+                        <span style="color: rgb(255, 255, 255,0.7);">
+                            <br>House is not home.
+                            <br>It takes time to make house a home.
+                        </span>
+                    </div>
+                    <div style="width: 40px;display: block;" onclick="closeCurrent()">
+                        <br>
+                        <span style="font-size: 30px;">x</span>
+                    </div>
+                </div>
+                <div
+                    style="background-color:transparent;width: 100%;min-height: 160px;overflow-y: scroll;flex: 2;padding-right: 30px;padding-bottom: 30px;padding-top: 30px;border-top: 1px solid white;border-bottom: 1px solid white;">
+                    <div>
+                        <div class="messageObj"></div>
+                    </div>
+                    <div style="display: flex;justify-content: right;">
+                        <div class="messageObj"></div>
+                    </div>
+                    <div>
+                        <div class="messageObj"></div>
+                    </div>
+                    <div style="display: flex;justify-content: right;">
+                        <div class="messageObj"></div>
+                    </div>
+                    <div>
+                        <div class="messageObj"></div>
+                    </div>
+                    <div style="display: flex;justify-content: right;">
+                        <div class="messageObj"></div>
+                    </div>
+
+                </div>
+                <div style="background-color: transparent;width: 100%;height: 60px;">
+                    <input type="text" class="inputText" placeholder="Type a message">
+                </div>
+            </div>
+        </button>
+
+
+
+
+
+    </div>
+</body>
+
+</html>
