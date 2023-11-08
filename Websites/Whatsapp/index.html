@@ -13,6 +13,19 @@
     style="background-image: url(images/bg.jpg);background-size:cover;margin: 0;padding: 0;background-position-y: -5px;background-position-x: 2px;background-repeat: no-repeat;overflow: hidden;"
     onload="INIT()">
     <div style="width: 415px;height: 100vh;position: absolute;" id="chatScroller"></div>
+    <div class="sideStripe" onclick="sideBarClick(true)">
+        <div style="width: 100%;height: 100%;display: flex;justify-content: center;align-items: center;">
+            <div
+                style="clip-path: polygon(0% 0%, 30% 0%, 100% 50%, 30% 100%, 0% 100%, 70% 50%);background-color: white;width: 16px;height: 48px">
+            </div>
+        </div>
+    </div>
+    <div id="sidePanel" class="sidePanel" onclick="sideBarClick(false)">
+        <img src="images/symbols/communities.png" alt="" class="sidePanelIcon">
+        <img src="images/symbols/Status.png" alt="" class="sidePanelIcon">
+        <img src="images/symbols/channels.png" alt="" class="sidePanelIcon">
+        <img src="images/symbols/NewChat.png" alt="" class="sidePanelIcon">
+    </div>
     <div style="width: 100%;height: 100vh;" id="_container">
         <button class="chatElements" onclick="ClickedChat(this)" style="top: 15px;overflow: hidden; ">
             <div class="chatElementsImgMask">
@@ -22,14 +35,16 @@
             </div>
             <div
                 style="margin-left: -60px;width:100%;background-color: transparent;text-align: left;display: flex;flex-direction: column;justify-content: start;height: 100%;gap: 20px;">
-                <div style="margin-left: 80px;color: white;display: flex;">
+                <div style="margin-left: 80px;color: white;display: flex;align-items: center;">
                     <div style="flex: 1;min-width: 400px;">
-                        <br><big><b>Sweet Home</b></big>
+                        <br><big><b>Ansley Simpson</b></big>
                         <span style="color: rgb(255, 255, 255,0.7);">
-                            <br>House is not home.
+                            <br>Be yourself, everyone else is already taken.
                             <br>It takes time to make house a home.
                         </span>
                     </div>
+                    <img src="images/symbols/more.png" alt="" style="width: 30px;height: 30px;margin-top: 20px;">
+                    <div style="width: 20px;"></div>
                     <div style="width: 40px;display: block;" onclick="closeCurrent()">
                         <br>
                         <span style="font-size: 30px;">x</span>
@@ -38,30 +53,40 @@
                 <div
                     style="background-color:transparent;width: 100%;min-height: 160px;overflow-y: scroll;flex: 2;padding-right: 30px;padding-bottom: 30px;padding-top: 30px;border-top: 1px solid white;border-bottom: 1px solid white;">
                     <div>
-                        <div class="messageObj"></div>
+                        <div class="messageObj messageObj_L"></div>
                     </div>
                     <div style="display: flex;justify-content: right;">
-                        <div class="messageObj"></div>
+                        <div class="messageObj messageObj_R"></div>
                     </div>
                     <div>
-                        <div class="messageObj"></div>
+                        <div class="messageObj messageObj_L"></div>
                     </div>
                     <div style="display: flex;justify-content: right;">
-                        <div class="messageObj"></div>
+                        <div class="messageObj messageObj_R"></div>
                     </div>
                     <div>
-                        <div class="messageObj"></div>
+                        <div class="messageObj messageObj_L"></div>
                     </div>
                     <div style="display: flex;justify-content: right;">
-                        <div class="messageObj"></div>
+                        <div class="messageObj messageObj_R"></div>
                     </div>
 
                 </div>
-                <div style="background-color: transparent;width: 100%;height: 60px;">
+                <div style="background-color: transparent;width: 100%;height: 60px;display: flex;">
+                    <div
+                        style="width: 60px;height: 100%;text-align: center;line-height: 60px;font-size: 40px;color: white;">
+                        🙂</div>
+                    <div
+                        style="width: 60px;height: 100%;text-align: center;line-height: 60px;font-size: 40px;color: white;">
+                        +</div>
                     <input type="text" class="inputText" placeholder="Type a message">
+                    <div
+                        style="width: 60px;height: 100%;text-align: center;line-height: 60px;font-size: 40px;color: white;">
+                        🎙</div>
                 </div>
             </div>
         </button>
+
 
 
 
@@ -74,14 +99,16 @@
             </div>
             <div
                 style="margin-left: -60px;width:100%;background-color: transparent;text-align: left;display: flex;flex-direction: column;justify-content: start;height: 100%;gap: 20px;">
-                <div style="margin-left: 80px;color: white;display: flex;">
+                <div style="margin-left: 80px;color: white;display: flex;align-items: center;">
                     <div style="flex: 1;min-width: 400px;">
-                        <br><big><b>Sweet Home</b></big>
+                        <br><big><b>Elliott House</b></big>
                         <span style="color: rgb(255, 255, 255,0.7);">
-                            <br>House is not home.
+                            <br>I am not a product of my circumstances. I am a product of my decisions
                             <br>It takes time to make house a home.
                         </span>
                     </div>
+                    <img src="images/symbols/more.png" alt="" style="width: 30px;height: 30px;margin-top: 20px;">
+                    <div style="width: 20px;"></div>
                     <div style="width: 40px;display: block;" onclick="closeCurrent()">
                         <br>
                         <span style="font-size: 30px;">x</span>
@@ -90,30 +117,45 @@
                 <div
                     style="background-color:transparent;width: 100%;min-height: 160px;overflow-y: scroll;flex: 2;padding-right: 30px;padding-bottom: 30px;padding-top: 30px;border-top: 1px solid white;border-bottom: 1px solid white;">
                     <div>
-                        <div class="messageObj"></div>
+                        <div class="messageObj messageObj_L"></div>
                     </div>
                     <div style="display: flex;justify-content: right;">
-                        <div class="messageObj"></div>
+                        <div class="messageObj messageObj_R"></div>
                     </div>
                     <div>
-                        <div class="messageObj"></div>
+                        <div class="messageObj messageObj_L"></div>
                     </div>
                     <div style="display: flex;justify-content: right;">
-                        <div class="messageObj"></div>
+                        <div class="messageObj messageObj_R"></div>
                     </div>
                     <div>
-                        <div class="messageObj"></div>
+                        <div class="messageObj messageObj_L"></div>
                     </div>
                     <div style="display: flex;justify-content: right;">
-                        <div class="messageObj"></div>
+                        <div class="messageObj messageObj_R"></div>
                     </div>
 
                 </div>
-                <div style="background-color: transparent;width: 100%;height: 60px;">
+                <div style="background-color: transparent;width: 100%;height: 60px;display: flex;">
+                    <div
+                        style="width: 60px;height: 100%;text-align: center;line-height: 60px;font-size: 40px;color: white;">
+                        🙂</div>
+                    <div
+                        style="width: 60px;height: 100%;text-align: center;line-height: 60px;font-size: 40px;color: white;">
+                        +</div>
                     <input type="text" class="inputText" placeholder="Type a message">
+                    <div
+                        style="width: 60px;height: 100%;text-align: center;line-height: 60px;font-size: 40px;color: white;">
+                        🎙</div>
                 </div>
             </div>
-        </button><button class="chatElements" onclick="ClickedChat(this)" style="top: 15px;overflow: hidden; ">
+        </button>
+
+
+
+
+
+        <button class="chatElements" onclick="ClickedChat(this)" style="top: 15px;overflow: hidden; ">
             <div class="chatElementsImgMask">
                 <img src="images/profiles/3.jpg" class="chatElementsImg" alt="">
             </div>
@@ -121,14 +163,16 @@
             </div>
             <div
                 style="margin-left: -60px;width:100%;background-color: transparent;text-align: left;display: flex;flex-direction: column;justify-content: start;height: 100%;gap: 20px;">
-                <div style="margin-left: 80px;color: white;display: flex;">
+                <div style="margin-left: 80px;color: white;display: flex;align-items: center;">
                     <div style="flex: 1;min-width: 400px;">
-                        <br><big><b>Sweet Home</b></big>
+                        <br><big><b>Sariah Waller</b></big>
                         <span style="color: rgb(255, 255, 255,0.7);">
-                            <br>House is not home.
+                            <br>Life is 10% what happens to us and 90% how we react to it.
                             <br>It takes time to make house a home.
                         </span>
                     </div>
+                    <img src="images/symbols/more.png" alt="" style="width: 30px;height: 30px;margin-top: 20px;">
+                    <div style="width: 20px;"></div>
                     <div style="width: 40px;display: block;" onclick="closeCurrent()">
                         <br>
                         <span style="font-size: 30px;">x</span>
@@ -137,30 +181,45 @@
                 <div
                     style="background-color:transparent;width: 100%;min-height: 160px;overflow-y: scroll;flex: 2;padding-right: 30px;padding-bottom: 30px;padding-top: 30px;border-top: 1px solid white;border-bottom: 1px solid white;">
                     <div>
-                        <div class="messageObj"></div>
+                        <div class="messageObj messageObj_L"></div>
                     </div>
                     <div style="display: flex;justify-content: right;">
-                        <div class="messageObj"></div>
+                        <div class="messageObj messageObj_R"></div>
                     </div>
                     <div>
-                        <div class="messageObj"></div>
+                        <div class="messageObj messageObj_L"></div>
                     </div>
                     <div style="display: flex;justify-content: right;">
-                        <div class="messageObj"></div>
+                        <div class="messageObj messageObj_R"></div>
                     </div>
                     <div>
-                        <div class="messageObj"></div>
+                        <div class="messageObj messageObj_L"></div>
                     </div>
                     <div style="display: flex;justify-content: right;">
-                        <div class="messageObj"></div>
+                        <div class="messageObj messageObj_R"></div>
                     </div>
 
                 </div>
-                <div style="background-color: transparent;width: 100%;height: 60px;">
+                <div style="background-color: transparent;width: 100%;height: 60px;display: flex;">
+                    <div
+                        style="width: 60px;height: 100%;text-align: center;line-height: 60px;font-size: 40px;color: white;">
+                        🙂</div>
+                    <div
+                        style="width: 60px;height: 100%;text-align: center;line-height: 60px;font-size: 40px;color: white;">
+                        +</div>
                     <input type="text" class="inputText" placeholder="Type a message">
+                    <div
+                        style="width: 60px;height: 100%;text-align: center;line-height: 60px;font-size: 40px;color: white;">
+                        🎙</div>
                 </div>
             </div>
-        </button><button class="chatElements" onclick="ClickedChat(this)" style="top: 15px;overflow: hidden; ">
+        </button>
+
+
+
+
+
+        <button class="chatElements" onclick="ClickedChat(this)" style="top: 15px;overflow: hidden; ">
             <div class="chatElementsImgMask">
                 <img src="images/profiles/4.jpg" class="chatElementsImg" alt="">
             </div>
@@ -168,14 +227,16 @@
             </div>
             <div
                 style="margin-left: -60px;width:100%;background-color: transparent;text-align: left;display: flex;flex-direction: column;justify-content: start;height: 100%;gap: 20px;">
-                <div style="margin-left: 80px;color: white;display: flex;">
+                <div style="margin-left: 80px;color: white;display: flex;align-items: center;">
                     <div style="flex: 1;min-width: 400px;">
-                        <br><big><b>Sweet Home</b></big>
+                        <br><big><b>Marley Manning</b></big>
                         <span style="color: rgb(255, 255, 255,0.7);">
-                            <br>House is not home.
+                            <br>Chase your dreams, not the competition.
                             <br>It takes time to make house a home.
                         </span>
                     </div>
+                    <img src="images/symbols/more.png" alt="" style="width: 30px;height: 30px;margin-top: 20px;">
+                    <div style="width: 20px;"></div>
                     <div style="width: 40px;display: block;" onclick="closeCurrent()">
                         <br>
                         <span style="font-size: 30px;">x</span>
@@ -184,30 +245,45 @@
                 <div
                     style="background-color:transparent;width: 100%;min-height: 160px;overflow-y: scroll;flex: 2;padding-right: 30px;padding-bottom: 30px;padding-top: 30px;border-top: 1px solid white;border-bottom: 1px solid white;">
                     <div>
-                        <div class="messageObj"></div>
+                        <div class="messageObj messageObj_L"></div>
                     </div>
                     <div style="display: flex;justify-content: right;">
-                        <div class="messageObj"></div>
+                        <div class="messageObj messageObj_R"></div>
                     </div>
                     <div>
-                        <div class="messageObj"></div>
+                        <div class="messageObj messageObj_L"></div>
                     </div>
                     <div style="display: flex;justify-content: right;">
-                        <div class="messageObj"></div>
+                        <div class="messageObj messageObj_R"></div>
                     </div>
                     <div>
-                        <div class="messageObj"></div>
+                        <div class="messageObj messageObj_L"></div>
                     </div>
                     <div style="display: flex;justify-content: right;">
-                        <div class="messageObj"></div>
+                        <div class="messageObj messageObj_R"></div>
                     </div>
 
                 </div>
-                <div style="background-color: transparent;width: 100%;height: 60px;">
+                <div style="background-color: transparent;width: 100%;height: 60px;display: flex;">
+                    <div
+                        style="width: 60px;height: 100%;text-align: center;line-height: 60px;font-size: 40px;color: white;">
+                        🙂</div>
+                    <div
+                        style="width: 60px;height: 100%;text-align: center;line-height: 60px;font-size: 40px;color: white;">
+                        +</div>
                     <input type="text" class="inputText" placeholder="Type a message">
+                    <div
+                        style="width: 60px;height: 100%;text-align: center;line-height: 60px;font-size: 40px;color: white;">
+                        🎙</div>
                 </div>
             </div>
-        </button><button class="chatElements" onclick="ClickedChat(this)" style="top: 15px;overflow: hidden; ">
+        </button>
+
+
+
+
+
+        <button class="chatElements" onclick="ClickedChat(this)" style="top: 15px;overflow: hidden; ">
             <div class="chatElementsImgMask">
                 <img src="images/profiles/5.jpg" class="chatElementsImg" alt="">
             </div>
@@ -215,14 +291,16 @@
             </div>
             <div
                 style="margin-left: -60px;width:100%;background-color: transparent;text-align: left;display: flex;flex-direction: column;justify-content: start;height: 100%;gap: 20px;">
-                <div style="margin-left: 80px;color: white;display: flex;">
+                <div style="margin-left: 80px;color: white;display: flex;align-items: center;">
                     <div style="flex: 1;min-width: 400px;">
-                        <br><big><b>Sweet Home</b></big>
+                        <br><big><b>Jennifer Soto</b></big>
                         <span style="color: rgb(255, 255, 255,0.7);">
-                            <br>House is not home.
+                            <br>I don’t have dreams; I have goals.
                             <br>It takes time to make house a home.
                         </span>
                     </div>
+                    <img src="images/symbols/more.png" alt="" style="width: 30px;height: 30px;margin-top: 20px;">
+                    <div style="width: 20px;"></div>
                     <div style="width: 40px;display: block;" onclick="closeCurrent()">
                         <br>
                         <span style="font-size: 30px;">x</span>
@@ -231,30 +309,45 @@
                 <div
                     style="background-color:transparent;width: 100%;min-height: 160px;overflow-y: scroll;flex: 2;padding-right: 30px;padding-bottom: 30px;padding-top: 30px;border-top: 1px solid white;border-bottom: 1px solid white;">
                     <div>
-                        <div class="messageObj"></div>
+                        <div class="messageObj messageObj_L"></div>
                     </div>
                     <div style="display: flex;justify-content: right;">
-                        <div class="messageObj"></div>
+                        <div class="messageObj messageObj_R"></div>
                     </div>
                     <div>
-                        <div class="messageObj"></div>
+                        <div class="messageObj messageObj_L"></div>
                     </div>
                     <div style="display: flex;justify-content: right;">
-                        <div class="messageObj"></div>
+                        <div class="messageObj messageObj_R"></div>
                     </div>
                     <div>
-                        <div class="messageObj"></div>
+                        <div class="messageObj messageObj_L"></div>
                     </div>
                     <div style="display: flex;justify-content: right;">
-                        <div class="messageObj"></div>
+                        <div class="messageObj messageObj_R"></div>
                     </div>
 
                 </div>
-                <div style="background-color: transparent;width: 100%;height: 60px;">
+                <div style="background-color: transparent;width: 100%;height: 60px;display: flex;">
+                    <div
+                        style="width: 60px;height: 100%;text-align: center;line-height: 60px;font-size: 40px;color: white;">
+                        🙂</div>
+                    <div
+                        style="width: 60px;height: 100%;text-align: center;line-height: 60px;font-size: 40px;color: white;">
+                        +</div>
                     <input type="text" class="inputText" placeholder="Type a message">
+                    <div
+                        style="width: 60px;height: 100%;text-align: center;line-height: 60px;font-size: 40px;color: white;">
+                        🎙</div>
                 </div>
             </div>
-        </button><button class="chatElements" onclick="ClickedChat(this)" style="top: 15px;overflow: hidden; ">
+        </button>
+
+
+
+
+
+        <button class="chatElements" onclick="ClickedChat(this)" style="top: 15px;overflow: hidden; ">
             <div class="chatElementsImgMask">
                 <img src="images/profiles/6.jpg" class="chatElementsImg" alt="">
             </div>
@@ -262,14 +355,16 @@
             </div>
             <div
                 style="margin-left: -60px;width:100%;background-color: transparent;text-align: left;display: flex;flex-direction: column;justify-content: start;height: 100%;gap: 20px;">
-                <div style="margin-left: 80px;color: white;display: flex;">
+                <div style="margin-left: 80px;color: white;display: flex;align-items: center;">
                     <div style="flex: 1;min-width: 400px;">
-                        <br><big><b>Sweet Home</b></big>
+                        <br><big><b>Barrett McKay</b></big>
                         <span style="color: rgb(255, 255, 255,0.7);">
-                            <br>House is not home.
+                            <br>Be a game changer, the world is full of players.
                             <br>It takes time to make house a home.
                         </span>
                     </div>
+                    <img src="images/symbols/more.png" alt="" style="width: 30px;height: 30px;margin-top: 20px;">
+                    <div style="width: 20px;"></div>
                     <div style="width: 40px;display: block;" onclick="closeCurrent()">
                         <br>
                         <span style="font-size: 30px;">x</span>
@@ -278,30 +373,45 @@
                 <div
                     style="background-color:transparent;width: 100%;min-height: 160px;overflow-y: scroll;flex: 2;padding-right: 30px;padding-bottom: 30px;padding-top: 30px;border-top: 1px solid white;border-bottom: 1px solid white;">
                     <div>
-                        <div class="messageObj"></div>
+                        <div class="messageObj messageObj_L"></div>
                     </div>
                     <div style="display: flex;justify-content: right;">
-                        <div class="messageObj"></div>
+                        <div class="messageObj messageObj_R"></div>
                     </div>
                     <div>
-                        <div class="messageObj"></div>
+                        <div class="messageObj messageObj_L"></div>
                     </div>
                     <div style="display: flex;justify-content: right;">
-                        <div class="messageObj"></div>
+                        <div class="messageObj messageObj_R"></div>
                     </div>
                     <div>
-                        <div class="messageObj"></div>
+                        <div class="messageObj messageObj_L"></div>
                     </div>
                     <div style="display: flex;justify-content: right;">
-                        <div class="messageObj"></div>
+                        <div class="messageObj messageObj_R"></div>
                     </div>
 
                 </div>
-                <div style="background-color: transparent;width: 100%;height: 60px;">
+                <div style="background-color: transparent;width: 100%;height: 60px;display: flex;">
+                    <div
+                        style="width: 60px;height: 100%;text-align: center;line-height: 60px;font-size: 40px;color: white;">
+                        🙂</div>
+                    <div
+                        style="width: 60px;height: 100%;text-align: center;line-height: 60px;font-size: 40px;color: white;">
+                        +</div>
                     <input type="text" class="inputText" placeholder="Type a message">
+                    <div
+                        style="width: 60px;height: 100%;text-align: center;line-height: 60px;font-size: 40px;color: white;">
+                        🎙</div>
                 </div>
             </div>
-        </button><button class="chatElements" onclick="ClickedChat(this)" style="top: 15px;overflow: hidden; ">
+        </button>
+
+
+
+
+
+        <button class="chatElements" onclick="ClickedChat(this)" style="top: 15px;overflow: hidden; ">
             <div class="chatElementsImgMask">
                 <img src="images/profiles/7.jpg" class="chatElementsImg" alt="">
             </div>
@@ -309,14 +419,16 @@
             </div>
             <div
                 style="margin-left: -60px;width:100%;background-color: transparent;text-align: left;display: flex;flex-direction: column;justify-content: start;height: 100%;gap: 20px;">
-                <div style="margin-left: 80px;color: white;display: flex;">
+                <div style="margin-left: 80px;color: white;display: flex;align-items: center;">
                     <div style="flex: 1;min-width: 400px;">
-                        <br><big><b>Sweet Home</b></big>
+                        <br><big><b>Leanna Patterson</b></big>
                         <span style="color: rgb(255, 255, 255,0.7);">
-                            <br>House is not home.
+                            <br>Living my life in my style.
                             <br>It takes time to make house a home.
                         </span>
                     </div>
+                    <img src="images/symbols/more.png" alt="" style="width: 30px;height: 30px;margin-top: 20px;">
+                    <div style="width: 20px;"></div>
                     <div style="width: 40px;display: block;" onclick="closeCurrent()">
                         <br>
                         <span style="font-size: 30px;">x</span>
@@ -325,30 +437,45 @@
                 <div
                     style="background-color:transparent;width: 100%;min-height: 160px;overflow-y: scroll;flex: 2;padding-right: 30px;padding-bottom: 30px;padding-top: 30px;border-top: 1px solid white;border-bottom: 1px solid white;">
                     <div>
-                        <div class="messageObj"></div>
+                        <div class="messageObj messageObj_L"></div>
                     </div>
                     <div style="display: flex;justify-content: right;">
-                        <div class="messageObj"></div>
+                        <div class="messageObj messageObj_R"></div>
                     </div>
                     <div>
-                        <div class="messageObj"></div>
+                        <div class="messageObj messageObj_L"></div>
                     </div>
                     <div style="display: flex;justify-content: right;">
-                        <div class="messageObj"></div>
+                        <div class="messageObj messageObj_R"></div>
                     </div>
                     <div>
-                        <div class="messageObj"></div>
+                        <div class="messageObj messageObj_L"></div>
                     </div>
                     <div style="display: flex;justify-content: right;">
-                        <div class="messageObj"></div>
+                        <div class="messageObj messageObj_R"></div>
                     </div>
 
                 </div>
-                <div style="background-color: transparent;width: 100%;height: 60px;">
+                <div style="background-color: transparent;width: 100%;height: 60px;display: flex;">
+                    <div
+                        style="width: 60px;height: 100%;text-align: center;line-height: 60px;font-size: 40px;color: white;">
+                        🙂</div>
+                    <div
+                        style="width: 60px;height: 100%;text-align: center;line-height: 60px;font-size: 40px;color: white;">
+                        +</div>
                     <input type="text" class="inputText" placeholder="Type a message">
+                    <div
+                        style="width: 60px;height: 100%;text-align: center;line-height: 60px;font-size: 40px;color: white;">
+                        🎙</div>
                 </div>
             </div>
-        </button><button class="chatElements" onclick="ClickedChat(this)" style="top: 15px;overflow: hidden; ">
+        </button>
+
+
+
+
+
+        <button class="chatElements" onclick="ClickedChat(this)" style="top: 15px;overflow: hidden; ">
             <div class="chatElementsImgMask">
                 <img src="images/profiles/8.jpg" class="chatElementsImg" alt="">
             </div>
@@ -356,14 +483,16 @@
             </div>
             <div
                 style="margin-left: -60px;width:100%;background-color: transparent;text-align: left;display: flex;flex-direction: column;justify-content: start;height: 100%;gap: 20px;">
-                <div style="margin-left: 80px;color: white;display: flex;">
+                <div style="margin-left: 80px;color: white;display: flex;align-items: center;">
                     <div style="flex: 1;min-width: 400px;">
-                        <br><big><b>Sweet Home</b></big>
+                        <br><big><b>Amir Maldonado</b></big>
                         <span style="color: rgb(255, 255, 255,0.7);">
-                            <br>House is not home.
+                            <br>Success is my only option, failure is not.
                             <br>It takes time to make house a home.
                         </span>
                     </div>
+                    <img src="images/symbols/more.png" alt="" style="width: 30px;height: 30px;margin-top: 20px;">
+                    <div style="width: 20px;"></div>
                     <div style="width: 40px;display: block;" onclick="closeCurrent()">
                         <br>
                         <span style="font-size: 30px;">x</span>
@@ -372,30 +501,41 @@
                 <div
                     style="background-color:transparent;width: 100%;min-height: 160px;overflow-y: scroll;flex: 2;padding-right: 30px;padding-bottom: 30px;padding-top: 30px;border-top: 1px solid white;border-bottom: 1px solid white;">
                     <div>
-                        <div class="messageObj"></div>
+                        <div class="messageObj messageObj_L"></div>
                     </div>
                     <div style="display: flex;justify-content: right;">
-                        <div class="messageObj"></div>
+                        <div class="messageObj messageObj_R"></div>
                     </div>
                     <div>
-                        <div class="messageObj"></div>
+                        <div class="messageObj messageObj_L"></div>
                     </div>
                     <div style="display: flex;justify-content: right;">
-                        <div class="messageObj"></div>
+                        <div class="messageObj messageObj_R"></div>
                     </div>
                     <div>
-                        <div class="messageObj"></div>
+                        <div class="messageObj messageObj_L"></div>
                     </div>
                     <div style="display: flex;justify-content: right;">
-                        <div class="messageObj"></div>
+                        <div class="messageObj messageObj_R"></div>
                     </div>
 
                 </div>
-                <div style="background-color: transparent;width: 100%;height: 60px;">
+                <div style="background-color: transparent;width: 100%;height: 60px;display: flex;">
+                    <div
+                        style="width: 60px;height: 100%;text-align: center;line-height: 60px;font-size: 40px;color: white;">
+                        🙂</div>
+                    <div
+                        style="width: 60px;height: 100%;text-align: center;line-height: 60px;font-size: 40px;color: white;">
+                        +</div>
                     <input type="text" class="inputText" placeholder="Type a message">
+                    <div
+                        style="width: 60px;height: 100%;text-align: center;line-height: 60px;font-size: 40px;color: white;">
+                        🎙</div>
                 </div>
             </div>
         </button>
+
+
 
 
 

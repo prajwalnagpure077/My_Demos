@@ -1,6 +1,7 @@
 var currentChatBtn = null;
 var AllBtns;
-var minWidth = 400;
+var minLeft = 50;
+var minWidth = 360;
 var maxWidth = 1400;
 var minHeight = 80;
 var maxHeight = 900;
@@ -8,6 +9,13 @@ var universalTop = 0;
 var slideComplete = false;
 var close = false;
 var _left;
+var sidePanel = null;
+var sidePanelVisibility = false;
+var sidePanel_marginLeft = -100;
+
+function sideBarClick(t) {
+    sidePanelVisibility = t;
+}
 
 function checkScrollDirectionIsUp(event) {
     if (event.wheelDelta) {
@@ -37,9 +45,9 @@ function ClickedChat(btn) {
     if (currentChatBtn == btn || close)
         return;
     _top = parseInt(btn.style.top.replace("px", ""));
-    _left = 15;
+    _left = minLeft;
     _height = 80;
-    _width = 400;
+    _width = minWidth;
     slideComplete = false;
     currentChatBtn = btn;
     btn.alpha = 0;
@@ -61,6 +69,7 @@ function INIT() {
     document.getElementById("chatScroller").addEventListener("wheel", event => {
         ChatsScroll(event);
     })
+    sidePanel = document.getElementById("sidePanel");
 }
 setInterval(AnimateChat, 20);
 
@@ -102,8 +111,8 @@ function AnimateChat() {
             if (__top == __f_top && __width == minWidth && __height == 80) {
                 __left = parseInt(element.style.left.replace("px", ""));
                 __left -= 40;
-                if (__left < 15)
-                    __left = 15;
+                if (__left < minLeft)
+                    __left = minLeft;
                 element.style.left = __left + "px";
             }
         }
@@ -133,4 +142,17 @@ function AnimateChat() {
             currentChatBtn.style.left = _left + "px";
         }
     }
+
+    if (sidePanelVisibility) {
+        sidePanel_marginLeft += 5;
+        if (sidePanel_marginLeft > 0)
+            sidePanel_marginLeft = 0;
+    }
+    else {
+        sidePanel_marginLeft -= 5;
+        if (sidePanel_marginLeft < -100)
+            sidePanel_marginLeft = -100;
+    }
+
+    sidePanel.style.marginLeft = sidePanel_marginLeft + "%";
 }
