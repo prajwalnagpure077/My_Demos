@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+  </head>
+  <body class="bg-dark">
+    <script>
+      document.write(
+        '<Table class="table table-dark table-hover bg-transparent table-bordered text-sm-center" style="height:50vh"'
+      );
+      for (let i = 1; i < 11; i++) {
+        document.write("<tr>");
+        for (let j = 3; j < 31; j++) {
+          var result =
+            '<div class="w-100 h-100 d-flex justify-content-center">' +
+            i * j +
+            "</div>";
+          if (i == 1)
+            document.write(
+              '<td class="bg-black text-xxl-center align-middle"><h3>' +
+                result +
+                "</h3></td>"
+            );
+          else
+            document.write(
+              '<td class="bg-dark align-middle"><h5>' + result + "</h5></td>"
+            );
+        }
+        document.write("</tr>");
+      }
+      document.write("</Table>");
+    </script>
+  </body>
+</html>
