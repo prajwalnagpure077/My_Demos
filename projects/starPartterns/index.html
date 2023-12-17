@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var size = 31;
+      document.write("<pre>");
+      for (let i = 0; i < size; i++) {
+        for (let j = 0; j < size; j++) {
+          if (j == i || j == size - i - 1) document.write("*");
+          else document.write("  ");
+        }
+        document.write("<br>");
+      }
+      document.write("</pre>");
+
+      document.write("<pre>");
+      var _midPoint = size % 2 == 0 ? size / 2 : (size - 1) / 2 + 1;
+      var _offset = 0;
+      var _up = true;
+      for (let y = 0; y < size; y++) {
+        for (let x = 0; x < size; x++) {
+          if (x >= _midPoint - _offset && x <= _midPoint + _offset) {
+            document.write(" * ");
+            if (x >= size - 1) _up = false;
+          } else document.write("   ");
+        }
+        if (_up) _offset++;
+        else _offset--;
+        document.write("<br>");
+      }
+      document.write("</pre>");
+    </script>
+  </body>
+</html>
